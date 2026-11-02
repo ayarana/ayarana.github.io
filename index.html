@@ -18,7 +18,7 @@ lang: pt-br
 
   <div class="tags">
     {% for tag in post.tags %}
-    <a href="#" class="tag">#{{ tag }}</a>
+    <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="tag">#{{ tag }}</a>
     {% endfor %}
   </div>
 

@@ -6,10 +6,20 @@ permalink: /tags/
 
 <section class="content">
   <h1>tags</h1>
+
   <div class="tags">
     {% assign ordenadas = site.tags | sort %}
-    {% for tag in ordenadas %}
-    <span class="tag">#{{ tag[0] }}</span>
-    {% endfor %}
+
   </div>
+
+  {% for tag in ordenadas %}
+  <section id="{{ tag[0] | slugify }}">
+    <h2>#{{ tag[0] }}</h2>
+    <ul>
+      {% for post in tag[1] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
 </section>

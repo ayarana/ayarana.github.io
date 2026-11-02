@@ -16,6 +16,13 @@
         }
     }
 
+    h2, h3 {
+        text-align: left;
+        font-family: var(--second-font);
+        margin-bottom: -10px;
+        line-height: 1.15;
+    }
+
     time {
         font-size: var(--tag-font-size);
         color: var(--muted-color);
@@ -41,6 +48,10 @@
         text-underline-offset: 4px;
     }
 
+    li {
+        text-align: left;
+    }
+
     li a {
         text-decoration: none;
     }
@@ -62,5 +73,22 @@
         color: var(--muted-color);
         font-family: var(--tag-font);
         letter-spacing: -0.02em;
+    }
+
+    .reply {
+        margin-top: 3rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--link-line-color);
+        font-family: var(--tag-font);
+        font-size: var(--tag-font-size);
+
+        a {
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: var(--muted-color);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            color: var(--base-font-color);
+        }
     }
 }

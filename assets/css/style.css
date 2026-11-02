@@ -102,6 +102,12 @@ header .menu .theme-toggle {
   text-decoration: none;
   color: var(--base-font-color);
 }
+.content h2, .content h3 {
+  text-align: left;
+  font-family: var(--second-font);
+  margin-bottom: -10px;
+  line-height: 1.15;
+}
 .content time {
   font-size: var(--tag-font-size);
   color: var(--muted-color);
@@ -122,6 +128,9 @@ header .menu .theme-toggle {
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
 }
+.content li {
+  text-align: left;
+}
 .content li a {
   text-decoration: none;
 }
@@ -140,6 +149,21 @@ header .menu .theme-toggle {
   color: var(--muted-color);
   font-family: var(--tag-font);
   letter-spacing: -0.02em;
+}
+.content .reply {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--link-line-color);
+  font-family: var(--tag-font);
+  font-size: var(--tag-font-size);
+}
+.content .reply a {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--muted-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  color: var(--base-font-color);
 }
 
 .footer {
@@ -214,4 +238,4 @@ li a {
   margin-inline: auto;
   padding: var(--content-padding-y) var(--content-padding-x);
   font-family: var(--base-font);
-}/*# sourceMappingURL=style.css.map */
+}

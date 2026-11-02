@@ -39,24 +39,14 @@ blockquote {
 }
 
 li a {
-    position: relative;
     text-decoration: none;
     color: var(--base-font-color);
-}
-
-li {
-    a::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 80%;
-        height: 6px;
-        background: var(--link-line-color);
-        z-index: -1;
-        text-decoration: none;
-        transform: translateY(-50%);
-    }
+    background-image: linear-gradient(var(--link-line-color), var(--link-line-color));
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    background-size: 100% 6px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .highlight {

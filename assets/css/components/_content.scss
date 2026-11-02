@@ -8,6 +8,7 @@
         font-family: var(--second-font);
         line-height: 1.15;
         margin-bottom: 8px;
+        letter-spacing: -0.02em;
 
         a {
             text-decoration: none;
@@ -42,5 +43,24 @@
 
     li a {
         text-decoration: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    figure {
+        margin: 0 0 1rem;
+    }
+
+    figcaption {
+        margin-top: 6px;
+        text-align: center;
+        font-size: var(--tag-font-size);
+        color: var(--muted-color);
+        font-family: var(--tag-font);
+        letter-spacing: -0.02em;
     }
 }

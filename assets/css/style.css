@@ -1,13 +1,16 @@
 :root {
   --base-font: "Newsreader", serif;
-  --second-font: "Noto Serif", serif;
+  --second-font: "DM Serif Text", serif;
+  --third-font: "Noto Serif", serif;
   --tag-font: "Fira Code", serif;
   --base-font-size: 20px;
   --tag-font-size: 14px;
   --blog-title-size: 40px;
+  --menu-font-size: 16px;
+  --footer-font-size: 16px;
   --base-bg-color: #f5f4ed;
-  --base-font-color: #222;
-  --base-tag-color: #222;
+  --base-font-color: #141413;
+  --base-tag-color: #141413;
   --muted-color: #666;
   --inverse-text-color: #eee;
   --link-line-color: #ccc;
@@ -64,6 +67,7 @@ header .menu {
   flex-wrap: wrap;
   justify-content: center;
   font-family: var(--tag-font);
+  font-size: var(--menu-font-size);
 }
 header .menu a {
   font-weight: 400;
@@ -92,6 +96,7 @@ header .menu .theme-toggle {
   font-family: var(--second-font);
   line-height: 1.15;
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 .content h1 a {
   text-decoration: none;
@@ -120,10 +125,27 @@ header .menu .theme-toggle {
 .content li a {
   text-decoration: none;
 }
+.content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.content figure {
+  margin: 0 0 1rem;
+}
+.content figcaption {
+  margin-top: 6px;
+  text-align: center;
+  font-size: var(--tag-font-size);
+  color: var(--muted-color);
+  font-family: var(--tag-font);
+  letter-spacing: -0.02em;
+}
 
 .footer {
   text-align: center;
   font-family: var(--tag-font);
+  font-size: var(--footer-font-size);
   padding-bottom: var(--footer-space);
 }
 
@@ -163,22 +185,14 @@ blockquote {
 }
 
 li a {
-  position: relative;
   text-decoration: none;
   color: var(--base-font-color);
-}
-
-li a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 80%;
-  height: 6px;
-  background: var(--link-line-color);
-  z-index: -1;
-  text-decoration: none;
-  transform: translateY(-50%);
+  background-image: linear-gradient(var(--link-line-color), var(--link-line-color));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 100% 6px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .highlight {

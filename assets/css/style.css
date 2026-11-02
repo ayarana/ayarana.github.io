@@ -1,0 +1,203 @@
+:root {
+  --base-font: "Newsreader", serif;
+  --second-font: "Noto Serif", serif;
+  --tag-font: "Fira Code", serif;
+  --base-font-size: 20px;
+  --tag-font-size: 14px;
+  --blog-title-size: 40px;
+  --base-bg-color: #f5f4ed;
+  --base-font-color: #222;
+  --base-tag-color: #222;
+  --muted-color: #666;
+  --inverse-text-color: #eee;
+  --link-line-color: #ccc;
+  --code-bg-color: #1e1e1e;
+  --base-content-width: 642px;
+  --content-padding-y: 2rem;
+  --content-padding-x: 1rem;
+  --header-padding-y: 15px;
+  --header-padding-x: 20px;
+  --footer-space: 10px;
+}
+
+[data-theme=dark] {
+  --base-bg-color: #1a1a1a;
+  --base-font-color: #e8e5da;
+  --muted-color: #9a968c;
+  --base-tag-color: #333;
+  --link-line-color: #555;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --base-font-size: 18px;
+    --blog-title-size: 30px;
+    --content-padding-y: 1.5rem;
+    --content-padding-x: 1.1rem;
+  }
+}
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header .header-container {
+  max-width: var(--base-content-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--header-padding-y) var(--header-padding-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+header h2.title {
+  margin: 0;
+  padding: 0;
+  font-family: var(--tag-font);
+  font-size: var(--blog-title-size);
+  text-align: center;
+  color: var(--base-font-color);
+}
+header .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--tag-font);
+}
+header .menu a {
+  font-weight: 400;
+  margin: 0 10px;
+  color: var(--base-font-color);
+}
+header .menu .theme-toggle {
+  margin: 0 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--base-font-color);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.content {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: var(--base-font-size);
+}
+.content h1 {
+  text-align: left;
+  font-family: var(--second-font);
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+.content h1 a {
+  text-decoration: none;
+  color: var(--base-font-color);
+}
+.content time {
+  font-size: var(--tag-font-size);
+  color: var(--muted-color);
+}
+.content .tags .tag {
+  background-color: var(--base-tag-color);
+  display: inline-block;
+  text-decoration: none;
+  color: var(--inverse-text-color);
+  padding: 2px 8px;
+  font-family: var(--tag-font);
+  font-size: var(--tag-font-size);
+}
+.content a {
+  text-decoration-line: underline;
+  text-decoration-color: var(--base-font-color);
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+.content li a {
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  font-family: var(--tag-font);
+  padding-bottom: var(--footer-space);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: var(--base-bg-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--base-font-color);
+  font-family: var(--base-font);
+}
+
+a {
+  font-weight: bold;
+  color: var(--base-font-color);
+  text-decoration: none;
+}
+
+blockquote {
+  border-left: 4px solid var(--base-font-color);
+  padding: 4px;
+  padding-left: 14px;
+  font-style: italic;
+}
+
+li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--base-font-color);
+}
+
+li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80%;
+  height: 6px;
+  background: var(--link-line-color);
+  z-index: -1;
+  text-decoration: none;
+  transform: translateY(-50%);
+}
+
+.highlight {
+  overflow-x: auto;
+  border-radius: 6px;
+  padding: 16px 18px;
+  font-family: var(--tag-font);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.highlight pre {
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: var(--base-content-width);
+  margin-inline: auto;
+  padding: var(--content-padding-y) var(--content-padding-x);
+  font-family: var(--base-font);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,8 @@
+title: Yarana's Log
+description: Personal blog
+lang: pt-BR
+url: "https://ayarana.github.io"
+author: Anayara Yarana
+
+plugins:
+  - jekyll-feed

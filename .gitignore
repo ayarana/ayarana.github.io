@@ -1,1 +1,4 @@
 *.css.map
+_site/
+.jekyll-cache/
+.sass-cache/

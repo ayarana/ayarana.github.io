@@ -1,0 +1,46 @@
+.content {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: var(--base-font-size);
+
+    h1 {
+        text-align: left;
+        font-family: var(--second-font);
+        line-height: 1.15;
+        margin-bottom: 8px;
+
+        a {
+            text-decoration: none;
+            color: var(--base-font-color);
+        }
+    }
+
+    time {
+        font-size: var(--tag-font-size);
+        color: var(--muted-color);
+    }
+
+    .tags {
+        .tag {
+            background-color: var(--base-tag-color);
+            display: inline-block;
+            text-decoration: none;
+            color: var(--inverse-text-color);
+            padding: 2px 8px;
+            font-family: var(--tag-font);
+            font-size: var(--tag-font-size);
+        }
+    }
+
+    a {
+        text-decoration-line: underline;
+        text-decoration-color: var(--base-font-color);
+        text-decoration-style: wavy;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 4px;
+    }
+
+    li a {
+        text-decoration: none;
+    }
+}

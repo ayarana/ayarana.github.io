@@ -1,0 +1,51 @@
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .header-container {
+        max-width: var(--base-content-width);
+        width: 100%;
+        margin: 0 auto;
+        padding: var(--header-padding-y) var(--header-padding-x);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    h2.title {
+        margin: 0;
+        padding: 0;
+        font-family: var(--tag-font);
+        font-size: var(--blog-title-size);
+        text-align: center;
+        color: var(--base-font-color);
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: var(--tag-font);
+
+        a {
+            font-weight: 400;
+            margin: 0 10px;
+            color: var(--base-font-color);
+        }
+
+        .theme-toggle {
+            margin: 0 10px;
+            padding: 0;
+            border: none;
+            background: none;
+            color: var(--base-font-color);
+            font-family: inherit;
+            font-size: inherit;
+            line-height: 1;
+            cursor: pointer;
+        }
+    }
+}

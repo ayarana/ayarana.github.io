@@ -1,0 +1,80 @@
+@use "components/config";
+@use "components/header";
+@use "components/content";
+@use "components/footer";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: var(--base-bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--base-font-color);
+    font-family: var(--base-font);
+}
+
+a {
+    font-weight: bold;
+    color: var(--base-font-color);
+    text-decoration: none;
+}
+
+blockquote {
+    border-left: 4px solid var(--base-font-color);
+    padding: 4px;
+    padding-left: 14px;
+    font-style: italic;
+}
+
+li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--base-font-color);
+}
+
+li {
+    a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80%;
+        height: 6px;
+        background: var(--link-line-color);
+        z-index: -1;
+        text-decoration: none;
+        transform: translateY(-50%);
+    }
+}
+
+.highlight {
+    overflow-x: auto;
+    border-radius: 6px;
+    padding: 16px 18px;
+    font-family: var(--tag-font);
+    font-size: 15px;
+    line-height: 1.6;
+
+    pre { margin: 0; }
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: var(--base-content-width);
+    margin-inline: auto;
+    padding: var(--content-padding-y) var(--content-padding-x);
+    font-family: var(--base-font);
+}

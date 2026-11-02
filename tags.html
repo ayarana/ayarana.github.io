@@ -1,0 +1,15 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<section class="content">
+  <h1>tags</h1>
+  <div class="tags">
+    {% assign ordenadas = site.tags | sort %}
+    {% for tag in ordenadas %}
+    <span class="tag">#{{ tag[0] }}</span>
+    {% endfor %}
+  </div>
+</section>

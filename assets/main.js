@@ -1,12 +1,19 @@
 (function () {
   var root = document.documentElement;
   var btn = document.getElementById("theme-toggle");
-  var fav = document.getElementById("favicon");
 
   function setFav() {
-    if (!fav) return;
     var dark = root.getAttribute("data-theme") === "dark";
-    fav.setAttribute("href", dark ? "/assets/favicons/favicon-dark.svg" : "/assets/favicons/favicon-light.svg");
+    var url = dark ? "/assets/favicons/favicon-dark.svg" : "/assets/favicons/favicon-light.svg";
+    fetch(url, { cache: "no-store" }).then(function (r) { return r.text(); }).then(function (svg) {
+      document.querySelectorAll('link[rel~="icon"]').forEach(function (l) { l.parentNode.removeChild(l); });
+      var link = document.createElement("link");
+      link.id = "favicon";
+      link.rel = "icon";
+      link.type = "image/svg+xml";
+      link.href = "data:image/svg+xml," + encodeURIComponent(svg);
+      document.head.appendChild(link);
+    });
   }
 
   setFav();
